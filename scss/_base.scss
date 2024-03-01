@@ -1,0 +1,115 @@
+html,body{
+    min-height: 100%;
+    
+}
+
+body{
+    font-family: $ff;
+    background: var(--bodyBg);
+    padding: 226px 20px 157px 20px; 
+}
+a{
+ font-weight: 700;
+ color: #5381f8;
+
+}
+.field {
+    display: block;
+    position: relative;
+    &:first-of-type{
+    margin-bottom: 23px;
+
+    }
+
+    &__input {
+        width: 100%; 
+        border: 1px solid rgba(3, 1, 76 , 0.6);
+        border-radius:$borderRadius;
+        padding: 24px 24px 24px 72px;
+        font-family: $ff;
+        font-size: 13px;
+        font-weight: 600;
+        outline: none;
+        &.is-password {
+            padding-right: 60px;
+        }
+        &::placeholder {
+            color: rgba(3, 1, 76 , 8.6);
+        }
+        
+                
+
+    }
+
+    &__icon, 
+     &__eye{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    
+    &__icon {
+        left:33px ;
+    }
+
+    &__eye {
+        right: 38px;
+        cursor: pointer;
+    }
+}
+.checkbox {
+    cursor: pointer;
+display: flex;
+gap: 13px;
+align-items: center;
+		&_box {
+            width: 14px;
+            height: 14px;
+            border:1px solid #03014c;
+            border-radius: 50%;
+            color:rgba(255,255,255 ,0);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            transition: .2s all ease-in;
+
+		}
+
+		&__input {
+            display: none;
+            &:checked ~ .checkbox_box{
+                background: #03014c;
+                color: rgba(255,255,255 ,1);
+
+            }
+		}
+
+		&__label {
+            color: rgba(3, 1, 76 , 0.6);
+            font-family: $ff;
+            font-size: 13.32px;
+            font-weight: 600;
+
+		}
+}
+
+
+
+.btn {
+    display: inline-block;
+    background:$btnBg;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    border-radius: $borderRadius;
+    padding: 23px 46px;
+    color: rgb(255, 255, 255);
+    font-size: 14.99px;
+    font-weight: 600;
+  transition: .2s all ease-in ;
+    &:hover{
+        background: darken($btnBg, 10%);
+    }
+   
+}
